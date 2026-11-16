@@ -1,0 +1,137 @@
+/* 基本版面重置 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Sans TC", Helvetica, Arial, sans-serif;
+}
+
+/* 11, 21, 23: 導覽列背景 cadetblue、寬度 80%、左右置中、上下留間隔 */
+header {
+    background-color: cadetblue;
+    width: 80%;
+    margin: 15px auto 0 auto;
+    padding: 10px 0;
+}
+
+/* 9, 10: 消除 ul 左填充，並讓按鈕在導覽列中左右置中 */
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+/* 1, 2, 3, 4: 導覽列按鈕並列、黑底、圓角、高度 30px */
+nav li {
+    display: inline-block;
+    background-color: black;
+    border-radius: 12px;
+    height: 30px;
+    margin: 0 3px;
+    vertical-align: middle;
+}
+
+/* 8: 滑鼠移到按鈕時背景變為 blue */
+nav li:hover {
+    background-color: blue;
+}
+
+/* 2, 3, 4, 5, 6, 7: 按鈕文字白字、普通字體、上下左右置中、無底線、內填充 5px、游標變手指 */
+nav a {
+    display: inline-block;
+    color: white;
+    font-weight: normal;
+    text-decoration: none;
+    padding: 5px;
+    height: 30px;
+    line-height: 20px; /* 配合 height: 30px 與上下 padding 各 5px，達成文字精準垂直置中 */
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* 24: main 與修課清單區塊佔 80% 頁面寬度，且左右置中 */
+main {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* 22: 「關於我」字體大小 42px，左緣比導覽列更內縮 */
+h1#aboutme {
+    font-size: 42px;
+    margin-left: 10%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* 學號與姓名段落置中對齊，學號加粗、25: 姓名用藍色字 */
+main > p {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+main > p span:first-of-type {
+    font-weight: bold;
+}
+
+main > p span:last-of-type {
+    color: blue;
+}
+
+/* 12, 17, 24: 必修課與選修課清單並列於同一行、頂部對齊、外框 cornflowerblue、上方圓角下方直角 */
+section {
+    display: inline-block;
+    vertical-align: top;
+    width: 45%;
+    border: 1px solid cornflowerblue;
+    border-radius: 10px 10px 0 0;
+    box-sizing: border-box;
+}
+
+/* 讓左右兩個區塊在 80% 寬度內左右分散對齊 */
+section:first-of-type {
+    margin-right: 10%;
+}
+
+/* 13, 14, 15, 16: 修課清單標題背景 cadetblue、白字、左上右上圓角 10px、文字置中、相對定位供斜標圖示對齊 */
+section h2 {
+    position: relative;
+    background-color: cadetblue;
+    color: white;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    margin: 0;
+    height: 110px;
+    line-height: 110px;
+    font-size: 24px;
+}
+
+/* 16: 「必修」和「選修」斜標小圖示準確置於標題框左上角 */
+section h2 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* 18: 修課清單項目文字使用 Noto Sans TC、16px、行高 22px、權重 100、替代字體 */
+section ul {
+    font-family: "Noto Sans TC", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 100;
+    padding: 20px 20px 30px 45px;
+    margin: 0;
+}
+
+/* 20: 頁腳文字靠右對齊選修課框線右緣 (與 main 同為 80% 寬度並置中即可精準對齊) */
+footer {
+    width: 80%;
+    margin: 15px auto 30px auto;
+    text-align: right;
+}
+
+/* 19: 利用偽元素 ::before 加入版權符號內碼 \00a9 */
+footer small::before {
+    content: "\00a9";
+}
